@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button gitbtn,songbtn;
+    Button gitbtn,songbtn,databtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         gitbtn=findViewById(R.id.gitbtn);
         songbtn=findViewById(R.id.songbtn);
+        databtn=findViewById(R.id.databtn);
 
         gitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,SongActivity.class));
+            }
+        });
+
+        databtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,Covid19Activity.class));
             }
         });
 
